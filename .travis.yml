@@ -2,9 +2,9 @@ language: c
 sudo: false
 script:
   - make
-  - clang -coverage -O0 main.c -o main
-  - ./main
-  - gcov main.c
+  - clang -coverage -O0 src/main.c src/skob.c -o bin/skob
+  - ./bin/skob
+  - gcov src/main.c src/skob.c 
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
