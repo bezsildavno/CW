@@ -29,10 +29,10 @@ changes:
     if_ci_failed: error
     
 ignore:
-  - "thirdparty/*"
+  - thirdparty/*.*
   
 comment:
-  layout: "header, diff"
+  layout: "header, changes, diff"
   behavior: default
   require_changes: no
 
