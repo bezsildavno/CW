@@ -21,7 +21,7 @@ parsers:
       macro: no
 
 ignore:
-  - "thirdparty"
+  - "thirdparty/ctest.h"
 
 comment:
   layout: "header, diff"
