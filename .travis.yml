@@ -5,7 +5,7 @@ script:
   - clang -coverage -O0 src/main.c src/skob.c -o bin/skob
   - ./bin/skob
   - gcov src/main.c src/skob.c
-  - clang -coverage -O0 test/main.c test/skob_test.c -o bin/skobt
+  - clang -coverage -O0 -I thirdparty test/main.c test/skob_test.c -o bin/skobt
   - ./bin/skobt
   - gcov test/main.c test/skob_test.c
 
