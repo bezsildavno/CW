@@ -3,9 +3,9 @@ codecov:
     require_ci_to_pass: yes
 
 coverage:
-  precision: 2
+  precision: 5
   round: down
-  range: "70...100"
+  range: "0...100"
 
   status:
     project: yes
@@ -19,6 +19,9 @@ parsers:
       loop: yes
       method: no
       macro: no
+
+ignore:
+  - "thirdparty"
 
 comment:
   layout: "header, diff"
