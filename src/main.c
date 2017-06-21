@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "skob.h" 
+#include "skob.h"
 
-int main()
-{
+int main () {
     FILE *f = open_file("data.txt");
-    if (f == NULL) 
-    { 
-        perror ("Error opening file"); 
-        getchar(); 
-        exit(1); 
+    if (f == NULL) {
+        perror("Error opening file");
+        getchar();
+        exit(1);
     }
     
     if (check(f) == 1)
