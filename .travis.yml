@@ -4,7 +4,7 @@ script:
   - make
   - clang -coverage -O0 src/main.c src/skob.c -o bin/skob
   - ./bin/skob
-  - gcov src/main.c src/skob.c
+  - gcov src/skob.c
   - find . -name '*.gcda' -delete
   - clang -coverage -O0 -I thirdparty test/main.c test/skob_test.c src/skob.c -o bin/skobt
   - ./bin/skobt
