@@ -9,6 +9,10 @@ script:
   - clang -coverage -O0 -I thirdparty test/main.c test/skob_test.c src/skob.c -o bin/skobt
   - ./bin/skobt
   - gcov test/skob_test.c
+  - find . -name '*.gcda' -delete
+  - clang -coverage -O0 src/main.c src/skob.c -o bin/skob
+  - ./bin/skob
+  - gcov src/main.c
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
